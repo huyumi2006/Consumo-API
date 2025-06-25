@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #60a5fa, #8b5cf6); /* Replaced Tailwind gradient with custom CSS */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-content {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 501px;
+    width: 90%; /* Added width for better responsiveness */
+    text-align: center;
+    padding: 20px 20px 50px;
+    /* margin: 10% auto 0; Removed margin-top for vertical centering */
+    background-color: #546785;
+    border-radius: 9px;
+}
+
+.weather-content h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+.weather-content p {
+    color: #cfcfd9;
+}
+
+.result {
+    margin-bottom: 8%;
+}
+
+.result p {
+    margin: 5px 0 5px;
+}
+
+.result h2 {
+    font-size: 70px;
+    line-height: 70px;
+    margin: -10px 0 10px;
+    color: #fff;
+}
+
+.result h5 {
+    font-size: 21px;
+    margin: 2px;
+    color: #fff;
+}
+
+/* New styling for the weather icon */
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto; /* Center the image */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="submit"],
+form select {
+    width: 100%;
+    margin: 0px 0 25px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Default text color for inputs */
+}
+
+form input[type="submit"] {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #14d4a5;
+    border: 1px solid #14d4a5;
+    color: #fff;
+    font-weight: 600;
+    transition: width 0.3s ease-in-out; /* Adjusted transition for smoother hover */
+}
+
+form input[type="submit"]:hover {
+    width: 90%; /* Adjusted hover width for a more subtle effect */
+}
+
+.alert-message {
+    margin: 24px 0 0;
+    color: red !important;
+    background-color: #ffe0e0; /* Light red background for alerts */
+    border: 1px solid #ff0000; /* Red border */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .weather-content {
+        padding: 15px 15px 30px;
+        margin: 5% auto 0;
+    }
+    .weather-content h1 {
+        font-size: 28px;
+    }
+    .result h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .result h5, .result p {
+        font-size: 18px;
+    }
+    form input[type="submit"]:hover {
+        width: 100%; /* On smaller screens, keep full width on hover */
+    }
+}
